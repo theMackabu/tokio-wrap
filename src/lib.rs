@@ -26,3 +26,16 @@ pub fn sync(_attr: TokenStream, item: TokenStream) -> TokenStream {
 
     gen.into()
 }
+
+#[cfg(test)]
+mod tests {
+    use trybuild::TestCases;
+
+    #[test]
+    fn test_tokio_sync_wrapper() {
+        let t = TestCases::new();
+        t.pass("tests/01-basic-usage.rs");
+        t.pass("tests/02-with-arguments.rs");
+        t.pass("tests/03-different-return-types.rs");
+    }
+}
