@@ -1,7 +1,10 @@
 [package]
 name = "tokio-wrap"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2021"
+license = "MIT"
+repository = "https://github.com/themackabu/tokio-wrap"
+description = "run asynchronous code within synchronous functions"
 
 [lib]
 proc-macro = true
